@@ -10,7 +10,6 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "TB_CHAMADO")
 public class Chamado implements Serializable {
 
     private static final long serialVersionUID = 1L;

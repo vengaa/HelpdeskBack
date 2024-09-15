@@ -2,6 +2,7 @@ package me.felipedev.HelpDesk.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import me.felipedev.HelpDesk.enums.Perfil;
 
 import java.io.Serializable;
