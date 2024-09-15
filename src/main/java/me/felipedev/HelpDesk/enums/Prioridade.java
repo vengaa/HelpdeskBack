@@ -1,13 +1,13 @@
-package me.felipedev.HelpDesk.domain.enums;
+package me.felipedev.HelpDesk.enums;
 
-public enum Status {
+public enum Prioridade {
 
-    ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"), ENCERRADO(2, "ENCERRADO");
+    BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"), ALTA(2, "ALTA");
 
     private Integer código;
     private String descricao;
 
-    Status(Integer código, String descricao) {
+    Prioridade(Integer código, String descricao) {
         this.código = código;
         this.descricao = descricao;
     }
@@ -20,15 +20,15 @@ public enum Status {
         return descricao;
     }
 
-    public static Status toEnum(Integer cod) {
+    public static Prioridade toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
-        for (Status x : Status.values()) {
+        for (Prioridade x : Prioridade.values()) {
             if (cod.equals(x.getCódigo())) {
                 return x;
             }
         }
-        throw new IllegalArgumentException("Status inválido");
+        throw new IllegalArgumentException("Prioridade inválida");
     }
 }

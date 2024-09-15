@@ -1,4 +1,4 @@
-package me.felipedev.HelpDesk.domain.enums;
+package me.felipedev.HelpDesk.enums;
 
 public enum Perfil {
 
@@ -12,7 +12,7 @@ public enum Perfil {
         this.descricao = descricao;
     }
 
-    public Integer getCódigo() {
+    public Integer getCodigo() {
         return código;
     }
 
@@ -25,7 +25,7 @@ public enum Perfil {
             return null;
         }
         for (Perfil x : Perfil.values()) {
-            if (cod.equals(x.getCódigo())) {
+            if (cod.equals(x.getCodigo())) {
                 return x;
             }
         }
