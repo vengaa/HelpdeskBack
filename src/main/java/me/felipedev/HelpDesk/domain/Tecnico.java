@@ -18,12 +18,12 @@ public class Tecnico extends Pessoa implements Serializable {
 
     public Tecnico() {
         super();
-        addPerfil(Perfil.CLIENTE);
+        addPerfil(Perfil.TECNICO); // Ensure correct profile
     }
 
-    public Tecnico(String nome, String cpf, String email, String senha, Integer id) {
-        super(nome, cpf, email, senha, id);
-        addPerfil(Perfil.CLIENTE);
+    public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
+        super(id, nome, cpf, email, senha);
+        addPerfil(Perfil.TECNICO); // Ensure correct profile
     }
 
     public List<Chamado> getChamados() {
